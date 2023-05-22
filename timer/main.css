@@ -2,20 +2,26 @@ body {
     background-color: #131219;
 }
 
-.main {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    height: 200px;
-    width: 400px;
+.container {
+    height: 97vh; /* make the div height to be the same as the page height */
+    display: flex;
+    justify-content: center; /* where it is in the X axis */
+    flex-wrap: wrap; /* almost a "break line" */
+    align-content: center; /* where it is in the Y axis */
+
+    animation: start 0.5s ease-in-out;
+}
+
+#block {
+    margin: 15px;
+    border: solid 10px #415388;
+    padding: 10px;
     background-color: #7089D4;
     border-radius: 10px;
+    height: 200px;
+    width: 400px;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
-    transition: all 3s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .title {
@@ -80,4 +86,13 @@ body {
 }
 #buttons:not(hover) {
     transition: all 0.5s;
+}
+
+@keyframes start {
+    0% {
+        height: 0px;
+    };
+    100% {
+        height: 200px;
+    }
 }

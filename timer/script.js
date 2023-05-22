@@ -47,7 +47,7 @@ function running() {
         
         if (seconds.value < 0 && minutes.value > 0) {
             minutes.value--
-            seconds.value = 60
+            seconds.value = 59
         }
         if (seconds.value == 0 && minutes.value == 0) {
             audio.play()
