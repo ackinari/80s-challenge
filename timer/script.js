@@ -21,6 +21,10 @@ function stop() {
     isRunning = 0
     audio.pause()
     audio.currentTime = 0
+
+    if (seconds.value == 0 && minutes.value == 0) {
+        reset()
+    }
 }
 
 function reset() {
@@ -38,11 +42,6 @@ setInterval(running, 1000)
 
 function running() {
     if (isRunning == 1) {
-        let minutesFormatted = minutes.value.padStart(2, '0');
-        let secondsFormatted = seconds.value.padStart(2, '0');
-
-        document.title = `${minutesFormatted}:${secondsFormatted}`;
-
         if (seconds.value > 0) {seconds.value--}
         if (seconds.value < 0 && minutes.value > 0) {
             minutes.value--
@@ -51,6 +50,10 @@ function running() {
         if (seconds.value == 0 && minutes.value == 0) {
             audio.play()
         }
+        let minutesFormatted = minutes.value.padStart(2, '0')
+        let secondsFormatted = seconds.value.padStart(2, '0')
+
+        document.title = `${minutesFormatted}:${secondsFormatted}`
     }
 
 }
