@@ -5,19 +5,29 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        <link rel="stylesheet" href="main.css">
         <title>Bin2Dec</title>
-        <script defer src="script.js"></script>
         
     </head>
 
     <body>
-        <div>
-            <h1>Binary to decimal: </h1>
-            <label for="bCode">Enter a 8 digits binary code:</label><br>
-            <input type="number" name="bCode" id="bCode" placeholder="00000000" pattern="[0-1]{8}">
-            <p><button onclick="printtxt()" id="button">Submit</button></p>
+        <div class="container">
+            <div id="block">
+                <div id="title">
+                    <h1>Binary to decimal </h1>
+                </div>
+
+                <div id="input">
+                    <label for="bCode">Enter a 8 digits binary code:</label><br>
+                    <input type="number" id="bCode" placeholder="00000000" pattern="[0-1]{8}">
+                </div>
+
+                <div id="buttons">
+                    <p><button onclick="printtxt()" id="button">Submit</button></p>
+                </div>
+            </div>
         </div>
+        <script defer src="script.js"></script>
     </body>
 
 </html>
