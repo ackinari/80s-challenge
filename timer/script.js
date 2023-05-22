@@ -42,7 +42,9 @@ setInterval(running, 1000)
 
 function running() {
     if (isRunning == 1) {
-        if (seconds.value > 0) {seconds.value--}
+        if (minutes.value > 0 && seconds.value == 0) {seconds.value--}
+        else if (seconds.value > 0) {seconds.value--}
+        
         if (seconds.value < 0 && minutes.value > 0) {
             minutes.value--
             seconds.value = 60
